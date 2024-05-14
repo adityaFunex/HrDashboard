@@ -23,12 +23,6 @@ function showTab(tabId, event) {
 
 
 // Google chart
-
-
-
-
-
-
 // New Chart
 async function fetchDataAndCreateCharts(url) {
     try {
