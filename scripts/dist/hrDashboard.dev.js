@@ -153,7 +153,7 @@ function createChart(chartId, chartType, chartData) {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  return fetchDataAndCreateCharts('../json/userTraffic.json');
+  return fetchDataAndCreateCharts('https://adityafunex.github.io/HrDashboard/json/userTraffic.json');
 }); // View perks 
 
 document.getElementById('toggleButton').addEventListener('click', function (event) {
@@ -166,7 +166,7 @@ document.getElementById('toggleButton').addEventListener('click', function (even
   this.textContent = isShowingMore ? 'View All' : 'View Less';
 });
 document.addEventListener('DOMContentLoaded', function () {
-  fetch('../json/perks.json').then(function (response) {
+  fetch('https://adityafunex.github.io/HrDashboard/json/perks.json').then(function (response) {
     return response.json();
   }).then(function (data) {
     return createTableRows(data);
@@ -203,7 +203,7 @@ function fetchCityData() {
         case 0:
           _context2.prev = 0;
           _context2.next = 3;
-          return regeneratorRuntime.awrap(fetch('../json/engagement.json'));
+          return regeneratorRuntime.awrap(fetch('https://adityafunex.github.io/HrDashboard/json/engagement.json'));
 
         case 3:
           response = _context2.sent;

@@ -125,7 +125,7 @@ function createChart(chartId, chartType, chartData) {
 }
 
 // Fetch and create charts when the document is fully loaded
-document.addEventListener('DOMContentLoaded', () => fetchDataAndCreateCharts('../json/userTraffic.json'));
+document.addEventListener('DOMContentLoaded', () => fetchDataAndCreateCharts('https://adityafunex.github.io/HrDashboard/json/userTraffic.json'));
 
 
 
@@ -144,7 +144,7 @@ document.getElementById('toggleButton').addEventListener('click', function (even
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('../json/perks.json')
+    fetch('https://adityafunex.github.io/HrDashboard/json/perks.json')
         .then(response => response.json())
         .then(data => createTableRows(data))
         .catch(error => console.error('Error loading the data:', error));
@@ -174,7 +174,7 @@ function createTableRows(data) {
 // engagement js
 async function fetchCityData() {
     try {
-        const response = await fetch('../json/engagement.json'); // Adjust the URL as needed
+        const response = await fetch('https://adityafunex.github.io/HrDashboard/json/engagement.json'); // Adjust the URL as needed
         if (!response.ok) {
             throw new Error('Network response was not ok.');
         }
