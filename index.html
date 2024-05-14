@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet/less" type="text/css" href="styles/default.less" />
+</head>
+
+<body>
+    <nav class="sidenav">
+        <a href="" class="nav-item x-center" title="Engagement"><i class="bi bi-bar-chart"></i> Engagement</a>
+        <a href="pages/employeemanagement.html" class="nav-item x-center" title="Employee Management"><i
+                class="bi bi-people"></i> Employee Management</a>
+        <a href="pages/rewards.html" class="nav-item x-center" title="Rewards"><i class="bi bi-gift"></i> Rewards</a>
+        <a href="pages/billing.html" class="nav-item x-center" title="Credits and Billing"><i
+                class="bi bi-currency-dollar"></i> Credits
+            and Billing</a>
+        <a href="pages/help.html" class="nav-item x-center" title="Help"><i class="bi bi-question-circle"></i> Help</a>
+        <a href="www.funex.com" class="nav-item x-center" title="Help"><i class="bi bi-arrow-return-left"></i> Back to
+            Funex</a>
+    </nav>
+    <div class="main-content">
+        <header>
+            <div class="logo-container x-center">
+                <img src="assets/logo/Walt-Disney-World-Logo-700x394.png" alt="clients logo" />
+            </div>
+            <div class="header-2 x-center">
+                <img src="assets/logo/funexicon.png" class="right20" />
+                <div>
+                    <h2>Hello Johnny,</h2>
+                    <p class="grey">Exec. Admin</p>
+                </div>
+                <div class="btn-group left-auto">
+                    <a href="pages/employeemanagement.html" class="btn blue">
+                        <i class="bi bi-person-add"></i>
+                        Employee Management
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="flex space-between">
+                <div>
+                    <div class="card icon-card-2">
+                        <div class="x-center">
+                            <i class="bi bi-wallet2 right20"></i>
+                            <div>
+                                <p class="grey">Current Balance</p>
+                                <h2 class="turquiose">$2,009.00</h2>
+                            </div>
+                        </div>
+                        <div class="btn-group top10">
+                            <a href="pages/billing.html">
+                                <button class="btn red"><i class="bi bi-plus-lg"></i> Add Funds</button>
+                            </a>
+                            <a href="pages/rewards.html">
+                                <button class="btn red"><i class="bi bi-gift"></i> Reward Employee</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-group">
+                    <div class="card icon-card-2 y-center column">
+                        <i class="bi bi-award right20 turquiose"></i>
+                        <h3>$5,042.00</h3>
+                        <p class="grey">Total Rewards</p>
+                    </div>
+                    <div class="card icon-card-2 y-center column">
+                        <i class="bi bi-coin right20 turquiose"></i>
+                        <h3>$5,042.00</h3>
+                        <p class="grey">Total Savings</p>
+                    </div>
+                    <div class="card icon-card-2 y-center column">
+                        <i class="bi bi-piggy-bank right20 turquiose"></i>
+                        <h3>$5,042.00</h3>
+                        <p class="grey">Average Savings</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex top20">
+                <div class="card right20 col50">
+                    <div class="flex xy-center bottom20">
+                        <h2 class="card-title xy-center left-auto">Active Monthly Users</h2>
+                        <div class="left-auto"><select data-filter="Active Monthly Users" data-filter-select>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                            </select></div>
+                    </div>
+                    <div class="legend-group x-center top20 bottom10">
+                        <div class="column legend">
+                            <span class="legend-label">This Month</span>
+                            <span data-id="this-month-data" class="legend-val">1330</span>
+                        </div>
+                        <div class="column legend">
+                            <span class="legend-label">Last 3 Months</span>
+                            <span data-id="last-3months-data" class="legend-val">1330</span>
+                        </div>
+                        <div class="column legend">
+                            <span class="legend-label">This Year</span>
+                            <span data-id="this-year-data" class="legend-val">1330</span>
+                        </div>
+                    </div>
+                    <canvas id="myChart" style="width:100%;"></canvas>
+                </div>
+                <div class="card col50">
+                    <div class="flex xy-center">
+                        <h2 class="card-title xy-center left-auto">Top 10 Most Popular Perks</h2>
+                        <div class="left-auto"><select data-filter="Top 10 Popular Pages" data-filter-select>
+                                <option selected>Current Month</option>
+                                <option value="1">Last 3 Months</option>
+                                <option value="2">Last 6 Months</option>
+                                <option value="3">Year to Date</option>
+                                <option value="4">Last 12 Months</option>
+                                <option value="5">All Time</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- <div id="top10" class="list-group top20 flex">
+                    </div> -->
+                    <span class="y-axis-label">Perks</span>
+                    <div id="top10Bar" class="flex" style="width: 613px; display: block; height: 500px;">
+                    </div>
+                    <span class="x-axis-label"># of clicks</span>
+                </div>
+            </div>
+        </div>
+        <footer class="xy-center">
+            <span class="right20">POWERED BY</span> <img src="assets/logo/funex-desktop-logo_nasubn.svg" />
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/4.2.0/less.min.js"
+        integrity="sha512-y2WgniVReZzVhOotEigpCJTu6Q6yGN0o8ezFzgS21PlWM1rqfSv7UPraV+IEDO9ljsli47Kr/toVOsukTVynuw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="scripts/default.js"></script>
+    <script src="scripts/graph.js"></script>
+    <script src="scripts/page/index.js"></script>
+</body>
+
+</html>

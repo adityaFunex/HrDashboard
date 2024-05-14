@@ -1,0 +1,540 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.mainHr-dashboasrd .main-content {
+    padding-top: 50px;
+}
+
+span.logoBox {
+    display: inline-block;
+    padding-right: 35px;
+    margin-right: 35px;
+    border-right: 2px solid #B1B2B3;
+}
+
+span.logoBox img {
+    height: 30px;
+}
+
+.logoContainer h1,
+.logoContainer h1 span {
+    font-weight: 800;
+    font-size: 26px;
+    color: #000;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 37px !important;
+}
+
+.registerEmployee-wrapper {
+    background-color: #fff;
+    padding: 25px 25px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.registerCount-box h2 {
+    font-weight: 700;
+    font-size: 35px;
+    color: #000;
+    line-height: 45px;
+}
+
+.registerCount-box p {
+    font-weight: 500;
+    color: #86898B;
+    font-size: 14px;
+}
+
+.registerCount-box {
+    margin-bottom: 50px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #0DC3C0;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #F2F4FE;
+    border-radius: 10px;
+}
+
+.progress span {
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+}
+
+.progressText-count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 3px;
+    margin-top: 2px;
+}
+
+.progressText-count span {
+    font-size: 10px;
+    color: #000;
+    font-weight: 600;
+}
+
+/* .hrTraffic-wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px 20px;
+    height: 100%;
+
+}
+
+.userTrafic-cover {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 4;
+}
+
+.trafficPerks-cover {
+    grid-row-start: 1;
+    grid-column-start: 4;
+    grid-row-end: 2;
+    grid-column-end: 5;
+}
+
+.engagement-cover {
+    grid-row-start: 2;
+    grid-column-start: 4;
+    grid-row-end: 4;
+    grid-column-end: 5;
+}
+
+.visitDuration-cover {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-row-end: 4;
+    grid-column-end: 2;
+}
+
+.pagesDuration-cover {
+    grid-row-start: 3;
+    grid-column-start: 2;
+    grid-row-end: 4;
+    grid-column-end: 3;
+}
+
+.avgVisitDuration-cover {
+    grid-row-start: 3;
+    grid-column-start: 3;
+    grid-row-end: 4;
+    grid-column-end: 4;
+} */
+
+.tabContent {
+    display: none;
+}
+
+.tabContent.active {
+    display: block;
+}
+
+.navBar-traffic .active {
+    background-color: #ccc;
+}
+
+ul.navBar-traffic {
+    display: inline-flex;
+    list-style: none;
+    align-items: center;
+    border: 1px solid #BFC9EB;
+    padding-left: 0px;
+    margin-block: 0px;
+    background-color: #F2F4FE;
+    border-radius: 5px;
+}
+
+a.trafficNav-link {
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 12px;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+li.trafficNav-item.active a.trafficNav-link {
+    background-color: #3A5372;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.sectionheading h2 {
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #000;
+}
+
+.userTraffic-box,
+.engagement-box {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px 0px;
+    background-color: #fff;
+    padding: 25px 25px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.userTraffic-graphTabContent {
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.tabContent div[dir="ltr"] {
+    width: 100% !important;
+    height: 500px !important;
+}
+
+.tabContent div[dir="ltr"] svg {
+    width: 100% !important;
+    height: 100% !important;
+    overflow: initial !important;
+}
+
+.tabContent div[dir="ltr"] svg>rect {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#chartContainer1,
+#chartContainer2,
+#chartContainer3,
+#chartContainer4,
+#chartContainer5 {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-color: transparent;
+    border-radius: 8px;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.trafficPerks-box {
+    background-color: #fff;
+    padding: 25px 25px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px 0px;
+    height: 100%;
+}
+
+.viewPerks {
+    color: #86898B;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.viewPerks:hover {
+    color: #000;
+}
+
+.trafficsPerks-detail {
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.additional {
+    display: none;
+}
+
+.trafficsPerks-detail table {
+    text-align: left;
+}
+
+.trafficsPerks-detail table tr th {
+    font-size: 12px;
+    font-weight: 500;
+    color: #86898B;
+    padding-block: 15px;
+    text-align: left;
+    padding-inline: 0px !important;
+}
+
+.trafficsPerks-detail .table thead tr:last-of-type th:first-of-type,
+.trafficsPerks-detail .table thead tr th {
+    padding-left: 0px !important;
+    background-color: transparent !important;
+    text-align: left;
+    border-radius: 0px;
+}
+
+.trafficsPerks-detail table tr+tr {
+    border-top: 1px solid #86898B;
+}
+
+.trafficsPerks-detail table tr td {
+    font-weight: 500;
+    padding: 15px 0px;
+    text-align: left;
+    background-color: transparent !important;
+}
+
+.trafficsPerks-detail .table tbody tr:nth-of-type(even) {
+    background-color: transparent !important;
+}
+
+.filterEngagement select {
+    width: fit-content !important;
+    padding: 3px 12px;
+    border-radius: 20px;
+    border: 1px solid #86898B;
+    color: #86898B;
+    font-size: 12px;
+    min-width: 80px;
+}
+
+.filterEngagement {
+    flex: 0 0 auto;
+    width: fit-content;
+    margin-left: auto;
+}
+
+.filterChart-box {
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+div#chartContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.filterChart-cover canvas {
+    position: static;
+    width: 220px !important;
+    height: 220px !important;
+    border-radius: 50%;
+}
+
+.engagement-box ul#legend {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0px;
+    width: 100%;
+    margin-block: 0px;
+}
+
+.engagement-box ul#legend li {
+    color: #86898B;
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0px 4px;
+}
+
+span.cityBox {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+span.funexIcon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileDetail h2 {
+    font-size: 24px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.profileDetail p {
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #86898B;
+}
+
+nav.sidenav.minimize span.funexIcon {
+    width: 35px;
+    height: 35px;
+}
+
+nav.sidenav.expand a.loginProfile {
+    border-bottom: 2px solid #86898B;
+}
+
+a.loginProfile {
+    display: inline-flex;
+    align-items: center;
+    gap: 0px 15px;
+    padding: 10px 0px;
+    margin-inline: 20px;
+    min-width: 300px;
+    width: 300px;
+}
+
+.visitDuration-box,
+.pagesDuration-box,
+.avgVisitDuration-box {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.coverBox-heading h2 {
+    font-weight: 700;
+    font-size: 35px;
+    color: #000;
+}
+
+.coverBox-heading p {
+    font-weight: 500;
+    font-size: 14px;
+    color: #86898B;
+}
+
+.statusContent span {
+    font-weight: 500;
+    font-size: 14px;
+    color: #5fd95b;
+    display: inline-block;
+}
+
+.downCover-box .statusContent span {
+    color: #fe2745;
+}
+
+.statusCover-box {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.statusIcon-box {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.statusContent {
+    width: calc(100% - 24px);
+    padding-left: 10px;
+}
+
+
+/*  */
+.hrTraffic-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: -10px;
+    gap: 20px 0px;
+    justify-content: space-between;
+}
+
+.hrMain-coverWrapper {
+    width: 75%;
+    flex: 0 0 auto;
+    padding-inline: 10px;
+}
+
+.rightMain-cover {
+    width: 25%;
+    flex: 0 0 auto;
+    padding-inline: 10px;
+}
+
+.leftUser-cover {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0px;
+}
+
+.visitCover-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: -10px;
+}
+
+.visitDuration-cover,
+.pagesDuration-cover,
+.avgVisitDuration-cover {
+    width: 33.33%;
+    padding-inline: 10px;
+}
+
+.rightMain-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 0px;
+    height: 100%;
+}
+
+.trafficPerks-cover,
+.engagement-cover {
+    width: 100%;
+    flex: 0 0 auto;
+}
+.engagement-box {
+    height: 100%;
+}
+
+
+
+
+
+/* Responisve Css */
+@media screen and (max-width:1800px){
+    
+}

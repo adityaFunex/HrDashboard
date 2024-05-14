@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet/less" type="text/css" href="../styles/default.less" />
+</head>
+
+<body>
+    <nav class="sidenav minimize">
+        <a href="../index.html" class="nav-item x-center" title="Engagement"><i class="bi bi-bar-chart"></i>
+            Engagement</a>
+        <a href="./employeemanagement.html" class="nav-item x-center" title="Employee Management"><i
+                class="bi bi-people"></i> Employee
+            Management</a>
+        <a href="./rewards.html" class="nav-item x-center" title="Rewards"><i class="bi bi-gift"></i> Rewards</a>
+        <a href="./billing.html" class="nav-item x-center" title="Credits and Billing"><i
+                class="bi bi-currency-dollar"></i> Credits
+            and Billing</a>
+        <a href="/" class="nav-item x-center" title="Help"><i class="bi bi-question-circle"></i> Help</a>
+        <a href="" class="nav-item x-center" title="Help"><i class="bi bi-arrow-return-left"></i> Back to Funex</a>
+    </nav>
+    <div class="main-content white">
+        <div class="flex">
+            <div id="reach-funex" class="side-nav-card col20">
+                <h4 class="faq-side-nav-header">Reach FunEx</h4>
+                <div class="nav-section">
+                    <h4 class="bullet-title"><i class="bi bi-telephone"></i> Call or Text</h4>
+                    <ul class="no-bullet-list">
+                        <li>Call Us - 949 367 1900</li>
+                        <li>Text Us - 949 367 1900</li>
+                        <li>7am - 10pm PST (7 Days)</li>
+                    </ul>
+                </div>
+                <div class="nav-section">
+                    <h4 class="bullet-title"><i class="bi bi-geo-alt"></i> Email</h4>
+                    <p>help@funex.com</p>
+                </div>
+                <div class="nav-section">
+                    <h4 class="bullet-title"><i class="bi bi-envelope"></i> Mail</h4>
+                    <p>Fun Express, Inc</p>
+                    <p>17777 Main Street #E2</p>
+                    <p>Irvine, CA 92614</p>
+                </div>
+            </div>
+            <div class="contact-us-form col40 y-center column">
+                <div class="form-title">Contact Us</div>
+                <div class="form-item column col100">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" />
+                </div>
+                <div class="form-item column col100">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" />
+                </div>
+                <div class="form-item column col100">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" />
+                </div>
+                <div class="form-item column col100">
+                    <label for="role">Phone Number</label>
+                    <input type="text" id="number" />
+                </div>
+                <div class="form-item column col100">
+                    <label for="department">Message</label>
+                    <textarea class="textarea"></textarea>
+                </div>
+                <button data-id="send-message" class="btn turquiose">Send Message</button>
+            </div>
+        </div>
+        <footer class="xy-center">
+            <span class="right20">POWERED BY</span> <img src="../assets/logo/funex-desktop-logo_nasubn.svg" />
+        </footer>
+    </div>
+    <div class="overlay y-center x-start" style="display: none;">
+        <div data-modal="dialog-alert" class="modal xy-center column col30">
+            <div class="dialog-icon bottom20 top20"><i class="bi bi-check-circle-fill top20"></i></div>
+            <p class="dialog-message bottom20">Changes have been saved successfully!</p>
+            <div class="modal-footer x-center space-between col100">
+                <button class="btn gray bordered cancel-btn" data-modal-close>
+                    <i class="bi bi-x"></i>
+                    Cancel</button>
+                <button class="btn green confirm-btn" data-modal-close>
+                    <i class="bi bi-check"></i>
+                    Confirm</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/4.2.0/less.min.js"
+        integrity="sha512-y2WgniVReZzVhOotEigpCJTu6Q6yGN0o8ezFzgS21PlWM1rqfSv7UPraV+IEDO9ljsli47Kr/toVOsukTVynuw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../scripts/default.js"></script>
+    <script src="../scripts/page/help.js"></script>
+</body>
+
+</html>

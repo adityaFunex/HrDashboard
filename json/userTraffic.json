@@ -1,0 +1,244 @@
+{
+    "yearly": [
+        {
+            "Month": "Jan",
+            "Order": 55000
+        },
+        {
+            "Month": "Feb",
+            "Order": 70000
+        },
+        {
+            "Month": "Mar",
+            "Order": 85000
+        },
+        {
+            "Month": "Apr",
+            "Order": 90000
+        },
+        {
+            "Month": "May",
+            "Order": 65000
+        },
+        {
+            "Month": "Jun",
+            "Order": 55000
+        },
+        {
+            "Month": "Jul",
+            "Order": 48000
+        },
+        {
+            "Month": "Aug",
+            "Order": 50000
+        },
+        {
+            "Month": "Sep",
+            "Order": 45000
+        },
+        {
+            "Month": "Oct",
+            "Order": 60000
+        },
+        {
+            "Month": "Nov",
+            "Order": 70000
+        },
+        {
+            "Month": "Dec",
+            "Order": 80000
+        }
+    ],
+    "monthly": [
+        {
+            "Date": "Mar 1",
+            "Order": 5000
+        },
+        {
+            "Date": "Mar 2",
+            "Order": 5200
+        },
+        {
+            "Date": "Mar 3",
+            "Order": 5100
+        },
+        {
+            "Date": "Mar 4",
+            "Order": 5300
+        },
+        {
+            "Date": "Mar 5",
+            "Order": 5500
+        },
+        {
+            "Date": "Mar 6",
+            "Order": 5700
+        },
+        {
+            "Date": "Mar 7",
+            "Order": 5900
+        },
+        {
+            "Date": "Mar 8",
+            "Order": 6100
+        },
+        {
+            "Date": "Mar 9",
+            "Order": 6300
+        },
+        {
+            "Date": "Mar 10",
+            "Order": 6500
+        },
+        {
+            "Date": "Mar 11",
+            "Order": 6700
+        },
+        {
+            "Date": "Mar 12",
+            "Order": 6900
+        },
+        {
+            "Date": "Mar 13",
+            "Order": 7100
+        },
+        {
+            "Date": "Mar 14",
+            "Order": 7300
+        },
+        {
+            "Date": "Mar 15",
+            "Order": 7500
+        },
+        {
+            "Date": "Mar 16",
+            "Order": 7700
+        },
+        {
+            "Date": "Mar 17",
+            "Order": 7900
+        },
+        {
+            "Date": "Mar 18",
+            "Order": 8100
+        },
+        {
+            "Date": "Mar 19",
+            "Order": 8300
+        },
+        {
+            "Date": "Mar 20",
+            "Order": 8500
+        },
+        {
+            "Date": "Mar 21",
+            "Order": 8700
+        },
+        {
+            "Date": "Mar 22",
+            "Order": 8900
+        },
+        {
+            "Date": "Mar 23",
+            "Order": 9100
+        },
+        {
+            "Date": "Mar 24",
+            "Order": 9300
+        },
+        {
+            "Date": "Mar 25",
+            "Order": 9500
+        },
+        {
+            "Date": "Mar 26",
+            "Order": 9700
+        },
+        {
+            "Date": "Mar 27",
+            "Order": 9900
+        },
+        {
+            "Date": "Mar 28",
+            "Order": 10100
+        },
+        {
+            "Date": "Mar 29",
+            "Order": 10300
+        },
+        {
+            "Date": "Mar 30",
+            "Order": 10500
+        },
+        {
+            "Date": "Mar 31",
+            "Order": 10700
+        }
+    ],
+    "threeMonth": [
+        {
+            "Period": "1 Month",
+            "Order": 5000
+        },
+        {
+            "Period": "2 Month",
+            "Order": 7500
+        },
+        {
+            "Period": "3 Month",
+            "Order": 10000
+        }
+    ],
+    "sixMonth": [
+        {
+            "Period": "1 Month",
+            "Order": 10000
+        },
+        {
+            "Period": "2 Month",
+            "Order": 12000
+        },
+        {
+            "Period": "3 Month",
+            "Order": 15000
+        },
+        {
+            "Period": "4 Month",
+            "Order": 18000
+        },
+        {
+            "Period": "5 Month",
+            "Order": 21000
+        },
+        {
+            "Period": "6 Month",
+            "Order": 24000
+        }
+    ],
+    "allTime": [
+        {
+            "Period": "1 Month",
+            "Order": 120000
+        },
+        {
+            "Period": "2 Month",
+            "Order": 130000
+        },
+        {
+            "Period": "3 Month",
+            "Order": 140000
+        },
+        {
+            "Period": "4 Month",
+            "Order": 150000
+        },
+        {
+            "Period": "5 Month",
+            "Order": 160000
+        },
+        {
+            "Period": "6 Month",
+            "Order": 170000
+        }
+    ]
+}

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet/less" type="text/css" href="../styles/default.less" />
+</head>
+
+<body>
+    <nav class="sidenav minimize">
+        <a href="../index.html" class="nav-item x-center" title="Engagement"><i class="bi bi-bar-chart"></i> Engagement</a>
+        <a href="./employeemanagement.html" class="nav-item x-center" title="Employee Management"><i
+                class="bi bi-people"></i> Employee
+            Management</a>
+        <a href="/" class="nav-item x-center" title="Rewards"><i class="bi bi-gift"></i> Rewards</a>
+        <a href="./billing.html" class="nav-item x-center" title="Credits and Billing"><i
+                class="bi bi-currency-dollar"></i> Credits
+            and Billing</a>
+        <a href="./help.html" class="nav-item x-center" title="Help"><i class="bi bi-question-circle"></i> Help</a>
+        <a href="www.funex.com" class="nav-item x-center" title="Help"><i class="bi bi-arrow-return-left"></i> Back to Funex</a>
+    </nav>
+    <div class="main-content">
+        <header>
+            <header>
+                <div class="logo-container x-center">
+                    <img src="../assets/logo/Walt-Disney-World-Logo-700x394.png" alt="clients logo" />
+                </div>
+            </header>
+            <div class="header-2 x-center">
+                <div class="flex">
+                    <h2 class="header-icon x-center"><i class="bi bi-gift"></i></h2>
+                    <div>
+                        <p class="header-text">Rewards</p>
+                        <p class="header-subtext grey">Reward single or multiple employees, add, and edit groups to
+                            make rewards more efficient</p>
+                    </div>
+                </div>
+                <div class="btn-group left-auto">
+                    <a href="./rewardshistory.html" class="btn blue">
+                        <i class="bi bi-clock"></i>
+                        Rewards History
+                        <i class="bi bi-arrow-right left20"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="flex">
+                <div class="card icon-card-2 right10">
+                    <div class="x-center">
+                        <i class="bi bi-wallet right20"></i>
+                        <div>
+                            <p class="grey">Current Balance</p>
+                            <h2 class="turquiose">$2,009.00</h2>
+                        </div>
+                    </div>
+                    <div class="btn-group top10">
+                        <a href="./billing.html" class="btn red"><i class="bi bi-plus-lg"></i> Add Funds</a>
+                        <button class="btn turquiose opacity0"  data-modal="list-of-groupdata-open-modals"><i
+                                class="bi bi-pencil"></i> Add Funds</button>
+                    </div>
+                </div>
+                <div class="card icon-card-2">
+                    <div class="x-center">
+                        <i class="bi bi-gift right20"></i>
+                        <div>
+                            <h2 class="turquiose">Reward Groups</h2>
+                            <p class="grey">10 Groups</p>
+                        </div>
+                    </div>
+                    <div class="btn-group top10">
+                        <button class="btn red" data-open-modal data-modal="list-of-groups"><i
+                                class="bi bi-pencil"></i> Edit Groups</button>
+                        <button class="btn blue" data-open-modal data-modal="create-new-group"><i
+                                class="bi bi-gift"></i> Add Groups</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card2 top20 filters-container">
+                <!-- <div class="all-filters">All Filters <i class="bi bi-plus-circle"></i></div> -->
+                <div class="filters wrap flex">
+                    <div class="filter-set">
+                        <label>First Name</label>
+                        <div class=""><input name="firstname" class="filter-input" /></div>
+                    </div>
+                    <div class="filter-set">
+                        <label>Last Name</label>
+                        <div class=""><input name="lastname" class="filter-input" /></div>
+                    </div>
+                    <div class="filter-set">
+                        <label>Email</label>
+                        <div class=""><input name="email" class="filter-input" /></div>
+                    </div>
+                    <div class="filter-set col10">
+                        <label>Role</label>
+                        <div class=""><select name="role" class="filter-input">
+                                <option selected></option>
+                                <option>Executive Admin</option>
+                                <option>Supervisor</option>
+                                <option>Manager</option>
+                                <option>Employee</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-set">
+                        <label>Department</label>
+                        <div class=""><input name="department" class="filter-input" /></div>
+                    </div>
+                    <div class="filter-set">
+                        <label>Supervisor</label>
+                        <div class=""><input name="supervisor" class="filter-input" /></div>
+                    </div>
+                    <div class="filter-set">
+                        <label>City</label>
+                        <div class=""><input name="city" class="filter-input" /></div>
+                    </div>
+                    <div class="filter-set">
+                        <label>Tags</label>
+                        <div class=""><input name="tags" class="filter-input" /></div>
+                    </div>
+                </div>
+                <div class="space-between x-center">
+                    <div class="btn-group">
+                        <button class="clear-filters btn gray bordered"><i class="bi bi-left bi-eraser"></i>
+                            Clear</button>
+                        <button class="filter-records btn blue"><i class="bi bi-left bi-search"></i>
+                            Search</button>
+                    </div>
+                    <div class="columns-selection dropdown-component top20 bottom10">
+                        <button class="columns-selection-btn btn purple">
+                            Columns <i class="bi bi-pencil"></i></button>
+                        <div class="dropdown">
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="firstname"></i>
+                                First Name
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="lastname"></i>
+                                Last Name
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="email"></i>
+                                Email
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="role"></i>
+                                Role
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="department"></i>
+                                Department
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="supervisor"></i>
+                                Supervisor
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="startdate"></i>
+                                Start Date
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="city"></i>
+                                City
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="code"></i>
+                                Zip Code
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="tags"></i>
+                                Tags
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="balance"></i>
+                                Balance
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="table main-table" data-name="rewards">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th data-column="firstname">First Name</th>
+                                <th data-column="lastname">Last Name</th>
+                                <th data-column="email">Email</th>
+                                <th data-column="role">Role</th>
+                                <th data-column="department">Department</th>
+                                <th data-column="supervisor">Supervisor</th>
+                                <th data-column="startdate">Start Date</th>
+                                <th data-column="city">City</th>
+                                <th data-column="code">Zip Code</th>
+                                <th data-column="tags" width="10%">Tags</th>
+                                <th data-column="balance">Balance</th>
+                                <th width="3%"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="rewards-table">
+
+                        </tbody>
+                    </table>
+                    <div class="flex x-center">
+                        <div class="pagination-settings x-center">
+                            <span>Records per page</span>
+                            <select id="record-count">
+                                <option selected>25</option>
+                                <option>50</option>
+                                <option>75</option>
+                                <option>100</option>
+                                <option>250</option>
+                            </select>
+                        </div>
+                        <div class="pagination x-center">
+                            <span class="page"><i class="bi bi-caret-left-fill"></i></span>
+                            <span class="page active">1</span>
+                            <span class="page">2</span>
+                            <span class="page">3</span>
+                            <span class="page">4</span>
+                            <span class="page">5</span>
+                            <span class="page"><i class="bi bi-caret-left-fill"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="xy-center">
+            <span class="right20">POWERED BY</span> <img src="../assets/logo/funex-desktop-logo_nasubn.svg" />
+        </footer>
+    </div>
+    <div class="overlay y-center x-start hidden">
+        <div data-modal="list-of-groups" class="modal col50 hidden">
+            <div class="modal-header space-between">
+                <h3><i class="bi bi-people"></i> Groups</h3>
+                <span class="bi bi-x-circle close-btn" data-modal-close></span>
+            </div>
+            <div class="modal-body">
+                <button class="btn purple bottom20" data-open-modal data-modal="create-new-group">
+                    <i class="bi bi-plus-lg"></i>
+                    Add Group
+                </button>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Group</th>
+                                <th>No. of Employees</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Group 1 - Example</td>
+                                <td>10 Employees</td>
+                                <td>
+                                    <div class="flex btn-group">
+                                        <button class="btn purple" data-open-modal data-modal="edit-group">
+                                            <i class="bi bi-pencil margin0"></i>
+                                        </button>
+                                        <button class="btn purple" data-open-modal data-modal="delete-group">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                        <button class="btn purple" data-open-modal data-modal="reward-group">
+                                            <i class="bi bi-gift"></i>
+                                            Reward
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer xy-center">
+                <button class="btn gray bordered" data-modal-close>Cancel</button>
+            </div>
+        </div>
+        <div data-modal="create-new-group" class="modal col60 hidden">
+            <div class="modal-header space-between">
+                <h3><i class="bi bi-plus-lg"></i> Create New Group</h3>
+                <span class="bi bi-x-circle close-btn" data-modal-close></span>
+            </div>
+            <div class="modal-body">
+                <div class="flex">
+                    <div class="col50">
+                        <div class="form">
+                            <div class="x-center form-item-group">
+                                <div class="form-item column col90">
+                                    <label for="groupname"><b>Group Name</b></label>
+                                    <input type="text" id="groupname" placeholder="Enter Group Name" />
+                                </div>
+                            </div>
+                            <div class="x-center form-item-group bottom5">
+                                <div class="form-item column col90">
+                                    <label for="employee-search"><b>Search employees</b></label>
+                                    <div class="search-input x-center">
+                                        <i class="bi bi-search"></i>
+                                        <input type="text" placeholder="Search Employee" class="employee-search not-req col90" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="x-center form-item-group">
+                                <div class="form-item column col90">
+                                    <label for="groupname"><b class="grey">Search results</b></label>
+                                    <div  data-id="employee-search-results" class="search-results tile-container">
+                                        <div data-parent="employee-added-create" class="tile employee-tile x-center col90">
+                                            <div class="img-container xy-center">
+                                                <img src="/assets/images/id.jpeg" />
+                                            </div>
+                                            <div class="flex x-center space-between col90">
+                                                <div class="main-text x-center">
+                                                    <span>Jane Doe</span>
+                                                </div>
+                                                <div class="sub-text">jane@funex.com</div>
+                                            </div>
+                                        </div>
+                                        <div data-parent="employee-added-create" class="tile employee-tile x-center col90">
+                                            <div class="img-container xy-center">
+                                                <img src="/assets/images/id.jpeg" />
+                                            </div>
+                                            <div class="flex x-center space-between col90">
+                                                <div class="main-text x-center">
+                                                    <span>Jane Doe</span>
+                                                </div>
+                                                <div class="sub-text">jane@funex.com</div>
+                                            </div>
+                                        </div>
+                                        <div data-parent="employee-added-create" class="tile employee-tile x-center col90">
+                                            <div class="img-container xy-center">
+                                                <img src="/assets/images/id.jpeg" />
+                                            </div>
+                                            <div class="flex x-center space-between col90">
+                                                <div class="main-text x-center">
+                                                    <span>Jane Doe</span>
+                                                </div>
+                                                <div class="sub-text">jane@funex.com</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col50">
+                        <div class="bottom10"><b>In this group</b></div>
+                        <div id="employee-added-create" class="tile-container">
+                            <div class="tile employee-add x-center col90">
+                                <div class="img-container xy-center">
+                                    <img src="/assets/images/id.jpeg" />
+                                </div>
+                                <div class="flex x-center col90">
+                                    <div>
+                                        <div class="main-text x-center">
+                                            <span>Jane Doe</span>
+                                            <span class="badge">Tech Team</span>
+                                        </div>
+                                        <div class="sub-text">jane@funex.com</div>
+                                    </div>
+                                    <div class="left-auto">
+                                        <button class="btn btn-icon remove-tile">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tile employee-add x-center col90">
+                                <div class="img-container xy-center">
+                                    <img src="/assets/images/id.jpeg" />
+                                </div>
+                                <div class="flex x-center col90">
+                                    <div>
+                                        <div class="main-text x-center">
+                                            <span>Jane Doe</span>
+                                            <span class="badge">Tech Team</span>
+                                        </div>
+                                        <div class="sub-text">jane@funex.com</div>
+                                    </div>
+                                    <div class="left-auto">
+                                        <button class="btn btn-icon remove-tile">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tile employee-add x-center col90">
+                                <div class="img-container xy-center">
+                                    <img src="/assets/images/id.jpeg" />
+                                </div>
+                                <div class="flex x-center col90">
+                                    <div>
+                                        <div class="main-text x-center">
+                                            <span>Jane Doe</span>
+                                            <span class="badge">Tech Team</span>
+                                        </div>
+                                        <div class="sub-text">jane@funex.com</div>
+                                    </div>
+                                    <div class="left-auto">
+                                        <button class="btn btn-icon remove-tile">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer btn-group xy-center">
+                <button class="btn gray bordered" data-modal-close>
+                    <i class="bi bi-x-lg"></i>
+                    Cancel</button>
+                <button data-id="add-group-submit" class="btn green">
+                    <i class="bi bi-floppy"></i>
+                    Save Records</button>
+            </div>
+        </div>
+        <div data-modal="edit-group" class="modal col60 hidden">
+            <div class="modal-header space-between">
+                <h3 class="edit-group-name"></h3>
+                <span class="bi bi-x-circle close-btn" data-modal-close></span>
+            </div>
+            <div class="modal-body">
+                <div class="flex">
+                    <div class="col40">
+                        <div class="form">
+                            <div class="x-center form-item-group">
+                                <div class="form-item column col90">
+                                    <label for="groupname"><b>Group Name</b></label>
+                                    <input type="text" id="groupname-edit-input" placeholder="Enter Group Name" />
+                                </div>
+                            </div>
+                            <div class="x-center form-item-group bottom5">
+                                <div class="form-item column col90">
+                                    <label for="groupname"><b>Search employees</b></label>
+                                    <div class="search-input x-center">
+                                        <i class="bi bi-search"></i>
+                                        <input type="text" placeholder="Search Employee" class="employee-search not-req col90" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="x-center form-item-group">
+                                <div class="form-item column col90">
+                                    <label for="groupname"><b class="grey">Search results</b></label>
+                                    <div data-id="employee-search-results" class="search-results tile-container">
+                                        <div data-parent="employee-added-edit" class="tile employee-tile x-center col90">
+                                            <div class="img-container xy-center">
+                                                <img src="/assets/images/id.jpeg" />
+                                            </div>
+                                            <div class="flex x-center space-between col90">
+                                                <div class="main-text x-center">
+                                                    <span>Jane Doe</span>
+                                                </div>
+                                                <div class="sub-text">jane@funex.com</div>
+                                            </div>
+                                        </div>
+                                        <div data-parent="employee-added-edit" class="tile employee-tile x-center col90">
+                                            <div class="img-container xy-center">
+                                                <img src="/assets/images/id.jpeg" />
+                                            </div>
+                                            <div class="flex x-center space-between col90">
+                                                <div class="main-text x-center">
+                                                    <span>Jane Doe</span>
+                                                </div>
+                                                <div class="sub-text">jane@funex.com</div>
+                                            </div>
+                                        </div>
+                                        <div data-parent="employee-added-edit" class="tile employee-tile x-center col90">
+                                            <div class="img-container xy-center">
+                                                <img src="/assets/images/id.jpeg" />
+                                            </div>
+                                            <div class="flex x-center space-between col90">
+                                                <div class="main-text x-center">
+                                                    <span>Jane Doe</span>
+                                                </div>
+                                                <div class="sub-text">jane@funex.com</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col60">
+                        <div class="bottom10"><b>In this group</b></div>
+                        <div id="employee-added-edit" class="tile-container">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer btn-group xy-center">
+                <button class="btn gray bordered" data-modal-close>
+                    <i class="bi bi-x-lg"></i>
+                    Cancel</button>
+                <button data-id="edit-group-submit" class="btn green">
+                    <i class="bi bi-floppy"></i>
+                    Save Records</button>
+            </div>
+        </div>
+        <div data-modal="reward-group" class="modal col50 hidden">
+            <div class="modal-header space-between">
+                <h3 class="reward-group-name"></h3>
+                <span class="bi bi-x-circle close-btn" data-modal-close></span>
+            </div>
+            <div class="modal-body">
+                <div class="flex bottom20">
+                    <b>Current Balance:</b> <b class="current-balance turquiose left10">$2,009.00</b>
+                </div>
+                <input type="hidden" id="reward-group-input" />
+                <div class="form">
+                    <div class="form-item-group">
+                        <div class="form-item column col50">
+                            <label for="reward-amount"><b>Enter Reward Amount</b></label>
+                            <input id="reward-group-amount" type="text" data-name="price-input" placeholder="$" />
+                        </div>
+                        <p class="top5">Remaining Balance after the reward: <b class="remaining-balance red left10">$2,009.00</b></p>
+                    </div>
+                </div>
+                <div class="x-center form-item-group">
+                    <div class="form-item column col100">
+                        <label for="groupname" class="bottom10"><b>In this group</b></label>
+                        <div data-id="reward-group-employees" class="search-results tile-container"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer btn-group xy-center">
+                <button class="btn gray bordered" data-modal-close>
+                    <i class="bi bi-x-lg"></i>
+                    Cancel</button>
+                <button class="btn green" data-id="reward-group-submit">
+                    <i class="bi bi-arrow-90deg-right"></i>
+                    Continue</button>
+            </div>
+        </div>
+        <div data-modal="reward-employee" class="modal col40 hidden">
+            <div class="modal-header space-between">
+                <h3><i class="bi bi-plus-lg"></i> Reward Employee</h3>
+                <span class="bi bi-x-circle close-btn" data-modal-close></span>
+            </div>
+            <div class="modal-body">
+                <div class="flex bottom20">
+                    <b>Current Balance:</b> <b class="current-balance turquiose left10">$2,009.00</b>
+                </div>
+                <div class="form">
+                    <div class="form-item-group">
+                        <div class="form-item column col50">
+                            <label for="reward-amount"><b>Enter Reward Amount</b></label>
+                            <input id="reward-amount" type="text" data-name="price-input" placeholder="$" />
+                        </div>
+                        <p class="top5">Remaining Balance after the reward: <b class="remaining-balance red left10"></b></p>
+                    </div>
+                </div>
+                <div class="x-center form-item-group">
+                    <div class="form-item column col100">
+                        <label for="groupname" class="bottom10"><b>Selected employees</b></label>
+                        <div id="reward-employee-table" class="search-results tile-container">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer btn-group xy-center">
+                <button class="btn gray bordered" data-modal-close>
+                    <i class="bi bi-x-lg"></i>
+                    Cancel</button>
+                <button data-id="reward-employee-submit" class="btn green" data-modal-close>
+                    <i class="bi bi-arrow-90deg-right"></i>
+                    Continue</button>
+            </div>
+        </div>
+        <div data-modal="dialog-alert" class="modal xy-center column col30">
+            <div class="dialog-icon bottom20 top20"><i class="bi bi-check-circle-fill top20"></i></div>
+            <p class="dialog-message bottom20">Changes have been saved successfully!</p>
+            <div class="modal-footer x-center space-between col100">
+                <button class="btn gray cancel-btn bordered" data-modal-close>
+                    <i class="bi bi-x"></i>
+                    Cancel</button>
+                <button class="btn green confirm-btn" data-modal-close>
+                    <i class="bi bi-check"></i>
+                    Confirm</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/4.2.0/less.min.js"
+        integrity="sha512-y2WgniVReZzVhOotEigpCJTu6Q6yGN0o8ezFzgS21PlWM1rqfSv7UPraV+IEDO9ljsli47Kr/toVOsukTVynuw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../scripts/default.js"></script>
+    <script src="../scripts/page/rewards.js"></script>
+</body>
+
+</html>

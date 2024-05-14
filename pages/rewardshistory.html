@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet/less" type="text/css" href="../styles/default.less" />
+</head>
+
+<body>
+    <nav class="sidenav minimize">
+        <a href="../index.html" class="nav-item x-center" title="Engagement"><i class="bi bi-bar-chart"></i> Engagement</a>
+        <a href="./employeemanagement.html" class="nav-item x-center" title="Employee Management"><i
+                class="bi bi-people"></i> Employee
+            Management</a>
+        <a href="./rewards.html" class="nav-item x-center" title="Rewards"><i class="bi bi-gift"></i> Rewards</a>
+        <a href="./billing.html" class="nav-item x-center" title="Credits and Billing"><i
+                class="bi bi-currency-dollar"></i> Credits
+            and Billing</a>
+        <a href="./help.html" class="nav-item x-center" title="Help"><i class="bi bi-question-circle"></i> Help</a>
+        <a href="www.funex.com" class="nav-item x-center" title="Help"><i class="bi bi-arrow-return-left"></i> Back to Funex</a>
+    </nav>
+    <div class="main-content">
+        <header>
+            <header>
+                <div class="logo-container x-center">
+                    <img src="../assets/logo/Walt-Disney-World-Logo-700x394.png" alt="clients logo" />
+                </div>
+            </header>
+            <div class="header-2 x-center">
+                <div class="flex">
+                    <h2 class="header-icon x-center"><i class="bi bi-people"></i></h2>
+                    <div>
+                        <p class="header-text">Rewards History</p>
+                        <p class="header-subtext grey">Reward single or multiple employees, add, and edit groups to
+                            make rewards more efficient</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="card2 top20 filters-container">
+                <!-- <div class="all-filters">All Filters <i class="bi bi-plus-circle"></i></div> -->
+                <div class="filters wrap flex">
+                    <div class="filter-set">
+                        <label>Date</label>
+                        <div class="x-center date-input-group"><input type="date" name="date" class="filter-input"/>
+                            <span style="margin-right: 5px;">to</span>
+                        <input type="date" name="date" class="filter-input"/></div>
+                    </div>
+                    <div class="filter-set">
+                        <label>From</label>
+                        <div class=""><input name="from" class="filter-input" placeholder="Enter email address"/></div>
+                    </div>
+                    <div class="filter-set">
+                        <label>To</label>
+                        <div class=""><input name="to" class="filter-input" placeholder="Enter email address"/></div>
+                    </div>
+                    <div class="filter-set">
+                        <label>Amount</label>
+                        <div class=""><input name="amount" class="filter-input"/></div>
+                    </div>
+                    <div class="filter-set">
+                        <label>Remaining Balance</label>
+                        <div class=""><input name="balance" class="filter-input"/></div>
+                    </div>
+                </div>
+                <div class="space-between x-center">
+                    <div class="btn-group">
+                        <button class="clear-filters btn gray bordered"><i class="bi bi-left bi-eraser"></i>
+                            Clear</button>
+                        <button class="filter-records btn blue"><i class="bi bi-left bi-search"></i>
+                            Search</button>
+                    </div>
+                    <div class="columns-selection dropdown-component top20 bottom10">
+                        <button class="columns-selection-btn btn purple">
+                            Columns <i class="bi bi-pencil"></i></button>
+                        <div class="dropdown">
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="date"></i>
+                                Date
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="from"></i>
+                                From
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="to"></i>
+                                To
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="amount"></i>
+                                Amount
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="balance"></i>
+                                Remaining Balance
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th data-column="date">Date</th>
+                                <th data-column="from">From</th>
+                                <th data-column="to">To</th>
+                                <th data-column="amount">Amount</th>
+                                <th data-column="balance">Remaining Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rewards-history-table">
+                        </tbody>
+                    </table>
+                    <div class="flex x-center">
+                        <div class="pagination-settings x-center">
+                            <span>Records per page</span>
+                            <select id="record-count">
+                                <option selected>25</option>
+                                <option>50</option>
+                                <option>75</option>
+                                <option>100</option>
+                                <option>250</option>
+                            </select>
+                        </div>
+                        <div class="pagination x-center">
+                            <span class="page"><i class="bi bi-caret-left-fill"></i></span>
+                            <span class="page active">1</span>
+                            <span class="page"><i class="bi bi-caret-left-fill"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="xy-center">
+            <span class="right20">POWERED BY</span> <img src="../assets/logo/funex-desktop-logo_nasubn.svg" />
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/4.2.0/less.min.js"
+        integrity="sha512-y2WgniVReZzVhOotEigpCJTu6Q6yGN0o8ezFzgS21PlWM1rqfSv7UPraV+IEDO9ljsli47Kr/toVOsukTVynuw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../scripts/default.js"></script>
+    <script src="../scripts/page/rewardshistory.js"></script>
+</body>
+
+</html>

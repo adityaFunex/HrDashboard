@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet/less" type="text/css" href="styles/default.less" />
+    <!-- Link Aditya Css -->
+    <link rel="stylesheet" href="styles/customStyle.css">
+    <!-- Link Rage Italic Font Family -->
+    <link href="https://fonts.cdnfonts.com/css/rage-italic" rel="stylesheet">
+</head>
+
+<body>
+    <div class="mainHr-dashboasrd">
+
+        <nav class="sidenav">
+            <a href="www.funex.com" class="nav-item x-center backHome" title="Help"><i
+                    class="bi bi-arrow-return-left"></i>
+                <span class="back">
+                    Back
+                    to
+                    Funex
+                </span>
+            </a>
+            <a href="#" class="loginProfile" title="profile">
+                <span class="funexIcon">
+                    <img src="assets/logo/funexicon.png" alt="logo" class="img-fluid">
+                </span>
+                <div class="profileDetail">
+                    <h2>
+                        john smith
+                    </h2>
+                    <p>
+                        executive Admin
+                    </p>
+                </div>
+            </a>
+            <a href="" class="nav-item x-center" title="Dashboard"><i class="bi bi-bar-chart"></i> Dashboard</a>
+            <a href="pages/rewards.html" class="nav-item x-center" title="Resources"><i class="bi bi-gift"></i>
+                Resources</a>
+            <a href="pages/help.html" class="nav-item x-center" title="Help"><i class="bi bi-question-circle"></i>
+                Help</a>
+        </nav>
+        <div class="main-content">
+            <header>
+                <div class="logoContainer">
+                    <span class="logoBox">
+                        <img src="assets/logo/funexLogo.png" alt="logo" class="img-fluid">
+                    </span>
+                    <h1>
+                        Welcome back, <span class="userName">
+                            John
+                        </span>
+                    </h1>
+                </div>
+            </header>
+            <!-- registerEmployee-wrapper -->
+            <div class="registerEmployee-wrapper">
+                <div class="registerCount-box">
+                    <h2>
+                        1230
+                    </h2>
+                    <p>
+                        Registered Employees
+                    </p>
+                </div>
+                <div class="progressContainer">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 43%;">
+                            <span>
+                                43%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="progressText-count">
+                        <span class="minValue">
+                            0
+                        </span>
+                        <span class="maxValue">
+                            100
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- hrTraffic-wrapper -->
+            <div class="hrTraffic-wrapper">
+                <div class="hrMain-coverWrapper">
+                    <div class="leftUser-cover">
+                        <div class="userTrafic-cover">
+                            <div class="userTraffic-coverWrapper">
+                                <div class="userTraffic-box">
+                                    <div class="sectionheading">
+                                        <h2>
+                                            user traffic
+                                        </h2>
+                                    </div>
+                                    <div class="userTrafficNav">
+                                        <ul class="navBar-traffic">
+                                            <li class="trafficNav-item active">
+                                                <a href="#" class="trafficNav-link"
+                                                    onclick="showTab('firstMonth', event)">1
+                                                    month</a>
+                                            </li>
+                                            <li class="trafficNav-item">
+                                                <a href="#" class="trafficNav-link"
+                                                    onclick="showTab('threeMonths', event)">3
+                                                    months</a>
+                                            </li>
+                                            <li class="trafficNav-item">
+                                                <a href="#" class="trafficNav-link"
+                                                    onclick="showTab('sixMonths', event)">6
+                                                    months</a>
+                                            </li>
+                                            <li class="trafficNav-item">
+                                                <a href="#" class="trafficNav-link"
+                                                    onclick="showTab('oneYear', event)">1
+                                                    year</a>
+                                            </li>
+                                            <li class="trafficNav-item">
+                                                <a href="#" class="trafficNav-link"
+                                                    onclick="showTab('allTimes', event)">All
+                                                    times</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="userTraffic-graphTabContent">
+                                        <div class="tabContent active" id="firstMonth">
+                                            <div id="chartContainer1">
+                                                <canvas id="trafficChart1"></canvas>
+                                            </div>
+                                        </div>
+                                        <div class="tabContent" id="threeMonths">
+                                            <div id="chartContainer2">
+                                                <canvas id="trafficChart2"></canvas>
+                                            </div>
+                                        </div>
+                                        <div class="tabContent" id="sixMonths">
+                                            <div id="chartContainer3">
+                                                <canvas id="trafficChart3"></canvas>
+                                            </div>
+                                        </div>
+                                        <div class="tabContent" id="oneYear">
+                                            <div id="chartContainer4">
+                                                <canvas id="trafficChart4"></canvas>
+                                            </div>
+                                        </div>
+                                        <div class="tabContent" id="allTimes">
+                                            <div id="chartContainer5">
+                                                <canvas id="trafficChart5"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="visitCover-wrapper">
+                            <div class="visitDuration-cover">
+                                <div class="visitDuration-box">
+                                    <div class="coverBox-heading">
+                                        <h2>
+                                            22,560
+                                        </h2>
+                                        <p>
+                                            Visits
+                                        </p>
+                                    </div>
+                                    <div class="statusCover-box">
+                                        <div class="statusIcon-box">
+                                            <img src="assets/images/upward.png" alt="Upward" class="img-fluid">
+                                        </div>
+                                        <div class="statusContent">
+                                            <span>
+                                                +5.03%
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagesDuration-cover">
+                                <div class="pagesDuration-box">
+                                    <div class="coverBox-heading">
+                                        <h2>
+                                            5.43%
+                                        </h2>
+                                        <p>
+                                            Pages/Visit
+                                        </p>
+                                    </div>
+                                    <div class="statusCover-box downCover-box">
+                                        <div class="statusIcon-box">
+                                            <img src="assets/images/down.png" alt="Upward" class="img-fluid">
+                                        </div>
+                                        <div class="statusContent">
+                                            <span>
+                                                -3.43%
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="avgVisitDuration-cover">
+                                <div class="avgVisitDuration-box">
+                                    <div class="coverBox-heading">
+                                        <h2>
+                                            13:25
+                                        </h2>
+                                        <p>
+                                            Avg Visit Duration
+                                        </p>
+                                    </div>
+                                    <div class="statusCover-box">
+                                        <div class="statusIcon-box">
+                                            <img src="assets/images/upward.png" alt="Upward" class="img-fluid">
+                                        </div>
+                                        <div class="statusContent">
+                                            <span>
+                                                +25.13%
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightMain-cover">
+                    <div class="rightMain-box">
+                        <div class="trafficPerks-cover">
+                            <div class="trafficPerks-box">
+                                <div class="sectionHeading">
+                                    <h2>
+                                        Top 10 Perks
+                                    </h2>
+                                </div>
+                                <div class="trafficPerks-btn">
+                                    <a href="#" class="viewPerks" id="toggleButton">
+                                        view all
+                                    </a>
+                                </div>
+                                <div class="trafficsPerks-detail">
+                                    <table class="table" id="perksTable">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Perk Name
+                                                </th>
+                                                <th>
+                                                    Impressions
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="initialRows">
+                                            <!-- Rows will be dynamically generated and inserted here -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="engagement-cover">
+                            <div class="engagement-box">
+                                <div class="section-heading">
+                                    <h2>Engagement</h2>
+                                </div>
+                                <div class="filterEngagement">
+                                    <select id="chartDropdown">
+                                        <!-- city name genetated by Javascript -->
+                                    </select>
+                                </div>
+                                <div class="filterChart-box">
+                                    <div class="filterChart-cover">
+                                        <div id="chartContainer">
+                                            <canvas id="chartCanvas" width="220" height="220"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul id="legend"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/4.2.0/less.min.js"
+        integrity="sha512-y2WgniVReZzVhOotEigpCJTu6Q6yGN0o8ezFzgS21PlWM1rqfSv7UPraV+IEDO9ljsli47Kr/toVOsukTVynuw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="scripts/default.js"></script>
+    <script src="scripts/graph.js"></script>
+    <script src="scripts/page/index.js"></script>
+    <script src="scripts/hrDashboard.js"></script>
+</body>
+
+</html>

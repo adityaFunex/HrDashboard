@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet/less" type="text/css" href="../styles/default.less" />
+</head>
+
+<body>
+    <nav class="sidenav minimize">
+        <a href="../index.html" class="nav-item x-center" title="Engagement"><i class="bi bi-bar-chart"></i> Engagement</a>
+        <a href="/" class="nav-item x-center" title="Employee Management"><i class="bi bi-people"></i> Employee
+            Management</a>
+        <a href="./rewards.html" class="nav-item x-center" title="Rewards"><i class="bi bi-gift"></i> Rewards</a>
+        <a href="./billing.html" class="nav-item x-center" title="Credits and Billing"><i
+                class="bi bi-currency-dollar"></i> Credits
+            and Billing</a>
+        <a href="./help.html" class="nav-item x-center" title="Help"><i class="bi bi-question-circle"></i> Help</a>
+        <a href="www.funex.com" class="nav-item x-center" title="Help"><i class="bi bi-arrow-return-left"></i> Back to Funex</a>
+    </nav>
+    <div class="main-content">
+        <header>
+            <header>
+                <div class="logo-container x-center">
+                    <img src="../assets/logo/Walt-Disney-World-Logo-700x394.png" alt="clients logo" />
+                </div>
+            </header>
+            <div class="header-2 x-center bottom20">
+                <div class="flex">
+                    <h2 class="header-icon x-center"><i class="bi bi-people"></i></h2>
+                    <div>
+                        <p class="header-text">Employee Management</p>
+                        <p class="header-subtext grey">Add and edit employee list, add employees in bulk, create and
+                            edit groups to
+                            easier
+                            rewarding</p>
+                    </div>
+                </div>
+                <div class="btn-group left-auto">
+                    <button class="btn blue" data-modal="add-employee" data-modal-action="Add Employee"
+                        data-open-modal>
+                        <i class="bi bi-left bi-person-add"></i>
+                        Add Employee
+                    </button>
+                    <button class="btn blue" data-modal="bulk-upload-employee" data-open-modal data-modal-action="Add Multiple Employees">
+                        <i class="bi bi-left bi-people"></i>
+                        Add Multiple Employees
+                    </button>
+                    <button class="export-csv btn blue">
+                        <i class="bi bi-download"></i>
+                        Export to CSV
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="card2 filters-container">
+                <!-- <div class="all-filters">All Filters <i class="bi bi-plus-circle"></i></div> -->
+                <div class="filters wrap flex">
+                    <div class="filter-set">
+                        <label>First Name</label>
+                        <div class=""><input name="firstname" class="filter-input" /></div>
+                    </div>
+                    <div class="filter-set">
+                        <label>Last Name</label>
+                        <div class=""><input name="lastname" class="filter-input" /></div>
+                    </div>
+                    <div class="filter-set">
+                        <label>Email</label>
+                        <div class=""><input name="email" class="filter-input" /></div>
+                    </div>
+                    <div class="filter-set col10">
+                        <label>Role</label>
+                        <div class=""><select name="role" class="filter-input">
+                                <option selected></option>
+                                <option>Executive Admin</option>
+                                <option>Supervisor</option>
+                                <option>Manager</option>
+                                <option>Employee</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-set">
+                        <label>Department</label>
+                        <div class=""><input name="department" class="filter-input" /></div>
+                    </div>
+                    <div class="filter-set">
+                        <label>Supervisor</label>
+                        <div class=""><input name="supervisor" class="filter-input" /></div>
+                    </div>
+                    <div class="filter-set">
+                        <label>City</label>
+                        <div class=""><input name="city" class="filter-input" /></div>
+                    </div>
+                    <div class="filter-set">
+                        <label>Tags</label>
+                        <div class=""><input name="tags" class="filter-input" /></div>
+                    </div>
+                </div>
+                <div class="space-between x-center">
+                    <div class="btn-group">
+                        <button class="clear-filters btn gray bordered"><i class="bi bi-left bi-eraser"></i>
+                            Clear</button>
+                        <button class="filter-records btn blue"><i class="bi bi-left bi-search"></i>
+                            Search</button>
+                    </div>
+                    <div class="columns-selection dropdown-component top20 bottom10">
+                        <button class="columns-selection-btn btn purple">
+                            Columns <i class="bi bi-pencil"></i></button>
+                        <div class="dropdown">
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="firstname"></i>
+                                First Name
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="lastname"></i>
+                                Last Name
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="email"></i>
+                                Email
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="role"></i>
+                                Role
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="department"></i>
+                                Department
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="supervisor"></i>
+                                Supervisor
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="startdate"></i>
+                                Start Date
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="city"></i>
+                                City
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="code"></i>
+                                Zip Code
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="tags"></i>
+                                Tags
+                            </div>
+                            <div class="dropdown-item active x-center">
+                                <i class="bi bi-check-circle-fill" data-column="balance"></i>
+                                Balance
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="table" data-name="employeemanagement">
+                        <thead>
+                            <tr>
+                                <th data-column="firstname">First Name</th>
+                                <th data-column="lastname">Last Name</th>
+                                <th data-column="email">Email</th>
+                                <th data-column="role">Role</th>
+                                <th data-column="department">Department</th>
+                                <th data-column="supervisor">Supervisor</th>
+                                <th data-column="startdate">Start Date</th>
+                                <th data-column="city">City</th>
+                                <th data-column="code">Zip Code</th>
+                                <th data-column="tags" width="10%">Tags</th>
+                                <th data-column="balance">Balance</th>
+                                <th width="3%"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="employee-table">
+
+                        </tbody>
+                    </table>
+                    <div class="flex x-center">
+                        <div class="pagination-settings x-center">
+                            <span>Records per page</span>
+                            <select id="record-count">
+                                <option selected>25</option>
+                                <option>50</option>
+                                <option>75</option>
+                                <option>100</option>
+                                <option>250</option>
+                            </select>
+                        </div>
+                        <div class="pagination x-center">
+                            <span class="page"><i class="bi bi-caret-left-fill"></i></span>
+                            <span class="page active">1</span>
+                            <span class="page">2</span>
+                            <span class="page">3</span>
+                            <span class="page">4</span>
+                            <span class="page">5</span>
+                            <span class="page"><i class="bi bi-caret-left-fill"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="xy-center">
+            <span class="right20">POWERED BY</span> <img src="../assets/logo/funex-desktop-logo_nasubn.svg" />
+        </footer>
+    </div>
+    <div class="overlay y-center x-start hidden">
+        <div data-modal="add-employee" class="modal hidden x-center col50 width500">
+            <div class="modal-header x-center space-between">
+                <h3>Add Employee</h3>
+                <span class="bi bi-x-circle close-btn" data-modal-close></span>
+            </div>
+            <form>
+                <div class="modal-body form">
+                    <div class="form-item column col100">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" />
+                    </div>
+                    <div class="form-item column col100">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" />
+                    </div>
+                    <div class="form-item column col100">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" />
+                    </div>
+                    <div class="form-item column col100">
+                        <label for="role">Role</label>
+                        <select id="role">
+                            <option selected></option>
+                            <option>Executive Admin</option>
+                            <option>Supervisor</option>
+                            <option>Manager</option>
+                            <option>Employee</option>
+                        </select>
+                    </div>
+                    <div class="form-item column col100">
+                        <label for="department">Department</label>
+                        <input type="text" id="department" />
+                    </div>
+                    <div class="form-item column col100">
+                        <label for="supervisor">Supervisor</label>
+                        <input type="text" id="supervisor" />
+                    </div>
+                    <div class="form-item column col100">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" id="startDate" />
+                    </div>
+                    <div class="form-item column col100">
+                        <label for="city">City</label>
+                        <input type="text" id="city" />
+                    </div>
+                    <div class="form-item column col100">
+                        <label for="zipcode">Zip Code</label>
+                        <input type="text" id="zipcode" />
+                    </div>
+                    <div class="form-item column col100">
+                        <label for="tags">Tags</label>
+                        <div class="icon-input x-center bottom10">
+                            <i class="bi bi-tags"></i>
+                            <input type="text" id="tags" class="tags-input"/>
+                        </div>
+                        <div class="tags-container">
+                            <div class="tag-group form-tags">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="modal-footer space-between">
+                <div class="x-center">
+                    <button class="btn gray bordered" type="button" data-modal-close>Cancel</button>
+                    <button class="btn green" data-id="add-employee">Save Changes</button>
+                </div>
+            </div>
+        </div>
+        <div data-modal="update-employee" class="modal hidden x-center col50 width500">
+            <div class="modal-header x-center space-between">
+                <h3>Update Employee</h3>
+                <span class="bi bi-x-circle close-btn" data-modal-close></span>
+            </div>
+            <form>
+                <div class="modal-body form">
+                    <div class="form-item column col100">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname-update" />
+                    </div>
+                    <div class="form-item column col100">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname-update" />
+                    </div>
+                    <div class="form-item column col100">
+                        <label for="email">Email</label>
+                        <input type="text" id="email-update" />
+                    </div>
+                    <div class="form-item column col100">
+                        <label for="role">Role</label>
+                        <select id="role-update">
+                            <option selected></option>
+                            <option>Executive Admin</option>
+                            <option>Supervisor</option>
+                            <option>Manager</option>
+                            <option>Employee</option>
+                        </select>
+                    </div>
+                    <div class="form-item column col100">
+                        <label for="department">Department</label>
+                        <input type="text" id="department-update" />
+                    </div>
+                    <div class="form-item column col100">
+                        <label for="supervisor">Supervisor</label>
+                        <input type="text" id="supervisor-update" />
+                    </div>
+                    <div class="form-item column col100">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" id="startDate-update" />
+                    </div>
+                    <div class="form-item column col100">
+                        <label for="city">City</label>
+                        <input type="text" id="city-update" />
+                    </div>
+                    <div class="form-item column col100">
+                        <label for="zipcode">Zip Code</label>
+                        <input type="text" id="zipcode-update" />
+                    </div>
+                    <div class="form-item column col100">
+                        <label for="tags">Tags</label>
+                        <div class="icon-input x-center bottom10">
+                            <i class="bi bi-tags"></i>
+                            <input type="text" id="tags-update" class="tags-input"/>
+                        </div>
+                        <div class="tags-container">
+                            <div class="tag-group form-tags update">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="modal-footer space-between">
+                <button class="btn red bordered" type="button" data-id="deactivate-employee">Deactivate</button>
+                <div class="x-center">
+                    <button class="btn gray bordered" type="button" data-modal-close>Cancel</button>
+                    <button class="btn green" data-id="update-employee">Save Changes</button>
+                </div>
+            </div>
+        </div>
+        <div data-modal="bulk-upload-employee" class="modal col40 hidden">
+            <div class="modal-header space-between">
+                <h3>Bulk Upload</h3>
+                <span class="bi bi-x-circle close-btn" data-modal-close></span>
+            </div>
+            <div class="modal-body form">
+                <p>Import names, email addresses and custom properties (tags,role) from a CSV or XLSX file.</p>
+                <p class="top20">You can use this <a href="">pre-formatted spreadsheet</a> to make it easier</p>
+                <div class="btn-group x-center top20">
+                    <button class="btn gray lg" open-file-upload>Choose File</button>
+                    <span class="upload-inbox-text grey">no file chosen</span>
+                    <input type="file" class="hidden" id="upload-employee-csv"
+                        accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
+                </div>
+                <div class="top5"><input type="checkbox" /> Deactivate users not on the list</div>
+            </div>
+            <div class="modal-footer space-between">
+                <button class="btn gray bordered" data-modal-close="">Cancel</button>
+                <button class="btn green lg disabled" data-id="bulk-upload-employees" data-modal-close>Upload</button>
+            </div>
+        </div>
+        <div data-modal="dialog-alert" class="modal xy-center column col30">
+            <div class="dialog-icon bottom20 top20"><i class="bi bi-check-circle-fill top20"></i></div>
+            <p class="dialog-message bottom20">Changes have been saved successfully!</p>
+            <div class="modal-footer x-center space-between col100">
+                <button class="btn gray cancel-btn bordered" data-modal-close>
+                    <i class="bi bi-x"></i>
+                    Cancel</button>
+                <button class="btn green confirm-btn" data-modal-close>
+                    <i class="bi bi-check"></i>
+                    Confirm</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/4.2.0/less.min.js"
+        integrity="sha512-y2WgniVReZzVhOotEigpCJTu6Q6yGN0o8ezFzgS21PlWM1rqfSv7UPraV+IEDO9ljsli47Kr/toVOsukTVynuw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../scripts/default.js"></script>
+    <script src="../scripts/page/employeemanagement.js"></script>
+</body>
+
+</html>

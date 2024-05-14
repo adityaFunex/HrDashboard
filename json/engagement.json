@@ -1,0 +1,20 @@
+{
+    "California": {
+        "color": "#0DC3C0",
+        "percentage": 400
+    },
+    "Texas": {
+        "color": "#FF4656",
+        "percentage": 100
+    },
+    "Florida": {
+        "color": "#3A5372",
+        "percentage": 300
+    },
+    "New York": {
+        "color": "#BECCF8",
+        "percentage": 200
+    }
+}
+
+

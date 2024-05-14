@@ -1,0 +1,32 @@
+[
+    {
+        "perkName": "Universal Studios",
+        "impressions": "62,343",
+        "isAdditional": false
+    },
+    {
+        "perkName": "Walt Disney World",
+        "impressions": "61,222",
+        "isAdditional": false
+    },
+    {
+        "perkName": "SeaWorld Orlando",
+        "impressions": "59,873",
+        "isAdditional": false
+    },
+    {
+        "perkName": "Extra Perk 1",
+        "impressions": "30,000",
+        "isAdditional": true
+    },
+    {
+        "perkName": "Extra Perk 2",
+        "impressions": "45,000",
+        "isAdditional": true
+    },
+    {
+        "perkName": "Extra Perk 3",
+        "impressions": "50,000",
+        "isAdditional": true
+    }
+]
