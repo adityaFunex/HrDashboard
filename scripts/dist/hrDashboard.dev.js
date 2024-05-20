@@ -127,7 +127,6 @@ function createChart(chartId, chartType, chartData) {
         xAxes: [{
           ticks: {
             fontColor: '#666',
-            fontFamily: 'Rage Italic',
             fontSize: 11
           },
           gridLines: {

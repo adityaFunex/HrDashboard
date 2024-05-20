@@ -28,7 +28,6 @@ async function fetchDataAndCreateCharts(url) {
     try {
         const response = await fetch(url);
         const data = await response.json();
-
         // Initialize charts based on fetched data
         createChart('trafficChart1', 'line', data.monthly);
         createChart('trafficChart2', 'line', data.threeMonth);
@@ -41,6 +40,7 @@ async function fetchDataAndCreateCharts(url) {
 }
 
 function createChart(chartId, chartType, chartData) {
+    console.log(chartId, chartData);
     var ctx = document.getElementById(chartId).getContext('2d');
 
     // Extracting data points from chartData
@@ -95,7 +95,6 @@ function createChart(chartId, chartType, chartData) {
                 xAxes: [{
                     ticks: {
                         fontColor: '#666',
-                        fontFamily: 'Rage Italic',
                         fontSize: 11
                     },
                     gridLines: {
@@ -147,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function createTableRows(data) {
     const tbody = document.getElementById('perksTable').getElementsByTagName('tbody')[0];
     tbody.innerHTML = ''; // Clear existing rows if any
-
+    console.log('Perks Data', data);
     data.forEach(perk => {
         const row = document.createElement('tr');
         row.className = perk.isAdditional ? 'additional' : '';
@@ -174,9 +173,11 @@ async function fetchCityData() {
         }
         const cityData = await response.json();
         const total = Object.values(cityData).reduce((acc, { percentage }) => acc + percentage, 0);
-        updateDropdown(cityData); // Update the dropdown with cities and include 'All' option
-        drawChart(cityData, total); // Initial drawing of the chart
-        attachDropdownListener(cityData, total); // Listen for changes in dropdown
+        console.log('TotalCityValue', total);
+        console.log('cityData', cityData);
+        updateDropdown(cityData);
+        drawChart(cityData, total);
+        attachDropdownListener(cityData, total);
     } catch (error) {
         console.error('Error fetching city data:', error);
     }
@@ -188,7 +189,7 @@ function updateDropdown(cityData) {
         console.error('Dropdown element not found!');
         return;
     }
-    dropdown.innerHTML = '<option>All</option>'; // Start with 'All' option
+    dropdown.innerHTML = '<option value="All">All</option>'; // Start with 'All' option
     Object.keys(cityData).forEach(city => {
         const option = document.createElement('option');
         option.value = city;
@@ -204,30 +205,49 @@ function drawChart(cityData, total, selectedCity = 'All') {
         return;
     }
     const ctx = canvas.getContext('2d');
+    if (!ctx) {
+        console.error('Failed to get canvas context!');
+        return;
+    }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    let startAngle = -0.5 * Math.PI;
 
-    const dataToDraw = selectedCity !== 'All' ? { [selectedCity]: cityData[selectedCity] } : cityData;
-
-    Object.keys(dataToDraw).forEach(city => {
-        const percentage = cityData[city].percentage / total;
-        ctx.fillStyle = cityData[city].color;
-        const endAngle = startAngle + percentage * 2 * Math.PI;
-        ctx.beginPath();
-        ctx.moveTo(120, 120);
-        ctx.arc(120, 120, 100, startAngle, endAngle);
-        ctx.lineTo(120, 120);
-        ctx.fill();
-        startAngle = endAngle;
-    });
-
-    // Drawing a white circle for doughnut chart effect
+    // Fill the entire canvas with the default background color
+    ctx.fillStyle = '#ccc';
     ctx.beginPath();
-    ctx.arc(120, 120, 80, 0, 2 * Math.PI);
-    ctx.fillStyle = 'white';
+    ctx.arc(110, 110, 100, 0, 2 * Math.PI);
     ctx.fill();
 
-    updateLegend(dataToDraw);
+    if (selectedCity !== 'All') {
+        const city = cityData[selectedCity];
+        const percentage = city.percentage / total;
+        ctx.fillStyle = city.color;
+        ctx.beginPath();
+        ctx.moveTo(110, 110); // Center of the canvas
+        ctx.arc(110, 110, 100, -0.5 * Math.PI, (percentage * 2 * Math.PI) - 0.5 * Math.PI);
+        ctx.lineTo(110, 110);
+        ctx.fill();
+    } else {
+        let startAngle = -0.5 * Math.PI;
+        Object.keys(cityData).forEach(city => {
+            const percentage = cityData[city].percentage / total;
+            ctx.fillStyle = cityData[city].color;
+            const endAngle = startAngle + percentage * 2 * Math.PI;
+            ctx.beginPath();
+            ctx.moveTo(110, 110); // Center of the canvas
+            ctx.arc(110, 110, 100, startAngle, endAngle);
+            ctx.lineTo(110, 110);
+            ctx.fill();
+            startAngle = endAngle;
+        });
+
+        // Drawing a white circle for doughnut chart effect
+        ctx.beginPath();
+        ctx.arc(110, 110, 80, 0, 2 * Math.PI); // Adjusted the center point
+        ctx.fillStyle = 'white';
+        ctx.fill();
+    }
+
+    updateLegend(selectedCity !== 'All' ? { [selectedCity]: cityData[selectedCity] } : cityData);
 }
 
 function updateLegend(cityData) {
@@ -238,7 +258,7 @@ function updateLegend(cityData) {
     }
     legend.innerHTML = '';
     Object.keys(cityData).forEach(city => {
-        const colorBox = `<span class="cityBox" style="display:inline-block; background-color:${cityData[city].color};"></span>`;
+        const colorBox = `<span class="cityBox" style="display:inline-block; width: 10px; height: 10px; background-color:${cityData[city].color}; margin-right: 5px;"></span>`;
         legend.innerHTML += `<li>${colorBox} ${city}</li>`;
     });
 }

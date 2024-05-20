@@ -11,10 +11,44 @@
         "color": "#3A5372",
         "percentage": 300
     },
-    "New York": {
-        "color": "#BECCF8",
+    "City1": {
+        "color": "#BECCF9",
+        "percentage": 200
+    },
+    "City2": {
+        "color": "#FF4664",
+        "percentage": 100
+    },
+    "City3": {
+        "color": "#3A5172",
+        "percentage": 300
+    },
+    "City4": {
+        "color": "#BECCF5",
+        "percentage": 200
+    },
+    "City5": {
+        "color": "#FF3656",
+        "percentage": 100
+    },
+    "City6": {
+        "color": "#3A5572",
+        "percentage": 300
+    },
+    "City7": {
+        "color": "#BECCA8",
+        "percentage": 200
+    },
+    "City8": {
+        "color": "#FF4606",
+        "percentage": 100
+    },
+    "City9": {
+        "color": "#3A5172",
+        "percentage": 300
+    },
+    "City10": {
+        "color": "#BECCF2",
         "percentage": 200
     }
 }
-
-

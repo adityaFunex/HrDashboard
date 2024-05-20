@@ -22,22 +22,24 @@
                 <span class="back">
                     Back
                     to
-                    Funex
+                    website
                 </span>
             </a>
-            <a href="#" class="loginProfile" title="profile">
-                <span class="funexIcon">
-                    <img src="assets/logo/funexicon.png" alt="logo" class="img-fluid">
-                </span>
-                <div class="profileDetail">
-                    <h2>
-                        john smith
-                    </h2>
-                    <p>
-                        executive Admin
-                    </p>
-                </div>
-            </a>
+            <div class="profile-container">
+                <a href="#" class="loginProfile" title="profile">
+                    <span class="funexIcon">
+                        <img src="assets/logo/funexicon.png" alt="logo" class="img-fluid">
+                    </span>
+                    <div class="profileDetail">
+                        <h2>
+                            john smith
+                        </h2>
+                        <p>
+                            executive Admin
+                        </p>
+                    </div>
+                </a>
+            </div>
             <a href="" class="nav-item x-center" title="Dashboard"><i class="bi bi-bar-chart"></i> Dashboard</a>
             <a href="pages/rewards.html" class="nav-item x-center" title="Resources"><i class="bi bi-gift"></i>
                 Resources</a>
@@ -99,7 +101,7 @@
                                     </div>
                                     <div class="userTrafficNav">
                                         <ul class="navBar-traffic">
-                                            <li class="trafficNav-item active">
+                                            <li class="trafficNav-item">
                                                 <a href="#" class="trafficNav-link"
                                                     onclick="showTab('firstMonth', event)">1
                                                     month</a>
@@ -119,7 +121,7 @@
                                                     onclick="showTab('oneYear', event)">1
                                                     year</a>
                                             </li>
-                                            <li class="trafficNav-item">
+                                            <li class="trafficNav-item active">
                                                 <a href="#" class="trafficNav-link"
                                                     onclick="showTab('allTimes', event)">All
                                                     times</a>
@@ -127,7 +129,7 @@
                                         </ul>
                                     </div>
                                     <div class="userTraffic-graphTabContent">
-                                        <div class="tabContent active" id="firstMonth">
+                                        <div class="tabContent" id="firstMonth">
                                             <div id="chartContainer1">
                                                 <canvas id="trafficChart1"></canvas>
                                             </div>
@@ -147,7 +149,7 @@
                                                 <canvas id="trafficChart4"></canvas>
                                             </div>
                                         </div>
-                                        <div class="tabContent" id="allTimes">
+                                        <div class="tabContent active" id="allTimes">
                                             <div id="chartContainer5">
                                                 <canvas id="trafficChart5"></canvas>
                                             </div>

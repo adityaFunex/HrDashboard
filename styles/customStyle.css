@@ -37,6 +37,28 @@ span.logoBox img {
     margin-bottom: 37px !important;
 }
 
+.mainHr-dashboasrd nav.sidenav,
+.mainHr-dashboasrd nav.sidenav.expand {
+    overflow: initial !important;
+    animation: unset !important;
+    width: 300px !important;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    height: auto;
+    display: block;
+    padding-top: 0px;
+}
+
+.mainHr-dashboasrd {
+    display: flex;
+}
+
+.mainHr-dashboasrd .main-content {
+    width: calc(100% - 300px);
+    margin-left: 0px !important;
+}
+
 .registerEmployee-wrapper {
     background-color: #fff;
     padding: 25px 25px;
@@ -365,6 +387,8 @@ div#chartContainer {
     padding-left: 0px;
     width: 100%;
     margin-block: 0px;
+    flex-wrap: wrap;
+    margin-inline: -5px;
 }
 
 .engagement-box ul#legend li {
@@ -372,7 +396,9 @@ div#chartContainer {
     font-size: 11px;
     display: inline-flex;
     align-items: center;
-    gap: 0px 4px;
+    gap: 5px 0px;
+    width: 33.33%;
+    padding-inline: 5px;
 }
 
 span.cityBox {
@@ -409,8 +435,8 @@ nav.sidenav.minimize span.funexIcon {
     height: 35px;
 }
 
-nav.sidenav.expand a.loginProfile {
-    border-bottom: 2px solid #86898B;
+.profile-container {
+    padding-inline: 20px;
 }
 
 a.loginProfile {
@@ -418,10 +444,11 @@ a.loginProfile {
     align-items: center;
     gap: 0px 15px;
     padding: 10px 0px;
-    margin-inline: 20px;
-    min-width: 300px;
-    width: 300px;
+    min-width: 100%;
+    width: 100%;
     margin-bottom: 30px;
+    border-bottom: 2px solid #86898B;
+    text-transform: capitalize;
 }
 
 .visitDuration-box,
@@ -485,13 +512,13 @@ a.loginProfile {
 }
 
 .hrMain-coverWrapper {
-    width: 75%;
+    width: 70%;
     flex: 0 0 auto;
     padding-inline: 10px;
 }
 
 .rightMain-cover {
-    width: 25%;
+    width: 30%;
     flex: 0 0 auto;
     padding-inline: 10px;
 }
