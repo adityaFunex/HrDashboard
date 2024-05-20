@@ -135,6 +135,14 @@ a.backHome i {
 a.nav-item.active {
     background-color: #ff595d !important;
 }
+span.navItem-icon {
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 26px;
+}
 
 /* .hrTraffic-wrapper {
     display: grid;
