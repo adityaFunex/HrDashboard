@@ -53,12 +53,19 @@ span.logoBox img {
 .mainHr-dashboasrd {
     display: flex;
 }
-
+a.backHome span.back {
+    font-size: 14px;
+}
 .mainHr-dashboasrd .main-content {
     width: calc(100% - 300px);
     margin-left: 0px !important;
 }
-
+a.backHome {
+    margin-bottom: 20px !important;
+}
+a.backHome i {
+    font-size: 15px !important;
+}
 .registerEmployee-wrapper {
     background-color: #fff;
     padding: 25px 25px;
@@ -118,6 +125,15 @@ span.logoBox img {
     font-size: 10px;
     color: #000;
     font-weight: 600;
+}
+.resourcesMain .resources-wrapper {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+a.nav-item.active {
+    background-color: #ff595d !important;
 }
 
 /* .hrTraffic-wrapper {
